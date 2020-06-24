@@ -27,43 +27,27 @@
 						class="order-item"
 					>
 						<view class="i-top b-b">
-							<text class="time">{{item.time}}</text>
+							<text class="time">{{item.createTime}}</text>
 							<text class="state" :style="{color: item.stateTipColor}">{{item.stateTip}}</text>
 							<text 
-								v-if="item.state===9" 
+								v-if="item.status!=0" 
 								class="del-btn yticon icon-iconfontshanchu1"
 								@click="deleteOrder(index)"
 							></text>
 						</view>
 						
-						<scroll-view v-if="item.goodsList.length > 1" class="goods-box" scroll-x>
-							<view
-								v-for="(goodsItem, goodsIndex) in item.goodsList" :key="goodsIndex"
-								class="goods-item"
-							>
-								<image class="goods-img" :src="goodsItem.image" mode="aspectFill"></image>
-							</view>
-						</scroll-view>
+					 
 						<view 
-							v-if="item.goodsList.length === 1" 
 							class="goods-box-single"
-							v-for="(goodsItem, goodsIndex) in item.goodsList" :key="goodsIndex"
 						>
-							<image class="goods-img" :src="goodsItem.image" mode="aspectFill"></image>
+							<image class="goods-img" :src="item.pic" mode="aspectFill"></image>
 							<view class="right">
-								<text class="title clamp">{{goodsItem.title}}</text>
-								<text class="attr-box">{{goodsItem.attr}}  x {{goodsItem.number}}</text>
-								<text class="price">{{goodsItem.price}}</text>
+								<text class="title clamp">{{item.goodsName}}</text>
+								<text class="price">{{item.payAmount}}</text>
 							</view>
 						</view>
-						
-						<view class="price-box">
-							共
-							<text class="num">7</text>
-							件商品 实付款
-							<text class="price">143.7</text>
-						</view>
-						<view class="action-box b-t" v-if="item.state != 9">
+					 
+						<view class="action-box b-t" v-if="item.status ==0">
 							<button class="action-btn" @click="cancelOrder(item)">取消订单</button>
 							<button class="action-btn recom">立即支付</button>
 						</view>
@@ -88,34 +72,37 @@
 		},
 		data() {
 			return {
+				orderList:[],
+				userInfo:[],
 				tabCurrentIndex: 0,
-				navList: [{
-						state: 0,
-						text: '全部',
-						loadingType: 'more',
-						orderList: []
-					},
+				navList: [ 
 					{
-						state: 1,
+						state: 0,
 						text: '待付款',
 						loadingType: 'more',
 						orderList: []
 					},
 					{
+						state: 1,
+						text: '待发货',
+						loadingType: 'more',
+						orderList: []
+					},
+					{
 						state: 2,
-						text: '待收货',
+						text: '已发货',
 						loadingType: 'more',
 						orderList: []
 					},
 					{
 						state: 3,
-						text: '待评价',
+						text: '已完成',
 						loadingType: 'more',
 						orderList: []
 					},
 					{
 						state: 4,
-						text: '售后',
+						text: '已关闭',
 						loadingType: 'more',
 						orderList: []
 					}
@@ -124,16 +111,38 @@
 		},
 		
 		onLoad(options){
-			
+			var that =this;
 			this.tabCurrentIndex = +options.state;
-			// #ifndef MP
+            this.userInfo=this.$getStorage("userInfo");
+			uni.request({
+			    url: "http://localhost:8083/api/order/goods?phone="+this.userInfo.username,
+			    dataType: "JSON",
+			    success: function(res) {
+					 this.orderList=res.data.data;
+					 for(var i = 0;i<res.data.data.length;i++){
+						 
+						 if(res.data.data[i].status==0){
+							 that.navList[0].orderList.push(res.data.data[i])
+						 }else if(res.data.data[i].status==1){
+							  that.navList[1].orderList.push(res.data.data[i])
+						 }else if(res.data.data[i].status==2){
+							  that.navList[2].orderList.push(res.data.data[i])
+						 }else if(res.data.data[i].status==3){
+							  that.navList[3].orderList.push(res.data.data[i])
+						 }else if(res.data.data[i].status==4){
+							  that.navList[4].orderList.push(res.data.data[i])
+						 }
+						
+					 }
+			         console.log(that.navList)
+			    },
+			
+			});
 			this.loadData()
-			// #endif
-			// #ifdef MP
 			if(options.state == 0){
 				this.loadData()
 			}
-			// #endif
+		
 			
 		},
 		 
@@ -157,12 +166,12 @@
 				navItem.loadingType = 'loading';
 				
 				setTimeout(()=>{
-					let orderList = Json.orderList.filter(item=>{
-						//添加不同状态下订单的表现形式
+					let orderList = this.orderList.filter(item=>{
+						 
 						item = Object.assign(item, this.orderStateExp(item.state));
-						//演示数据所以自己进行状态筛选
+						 
 						if(state === 0){
-							//0为全部订单
+							 
 							return item;
 						}
 						return item.state === state
@@ -170,10 +179,10 @@
 					orderList.forEach(item=>{
 						navItem.orderList.push(item);
 					})
-					//loaded新字段用于表示数据加载完毕，如果为空可以显示空白页
+					
 					this.$set(navItem, 'loaded', true);
 					
-					//判断是否还有数据， 有改为 more， 没有改为noMore 
+					
 					navItem.loadingType = 'more';
 				}, 600);	
 			}, 
@@ -205,7 +214,7 @@
 				setTimeout(()=>{
 					let {stateTip, stateTipColor} = this.orderStateExp(9);
 					item = Object.assign(item, {
-						state: 9,
+						state: 4,
 						stateTip, 
 						stateTipColor
 					})
@@ -224,11 +233,11 @@
 				let stateTip = '',
 					stateTipColor = '#fa436a';
 				switch(+state){
-					case 1:
+					case 0:
 						stateTip = '待付款'; break;
-					case 2:
+					case 1:
 						stateTip = '待发货'; break;
-					case 9:
+					case 4:
 						stateTip = '订单已关闭'; 
 						stateTipColor = '#909399';
 						break;

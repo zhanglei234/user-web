@@ -50,6 +50,7 @@
 	export default {
 		data() {
 			return {
+				userInfo:[],
 				payType: 1,
 				orderInfo: {},
 				goodsList:[],
@@ -58,7 +59,9 @@
 					goodsName:'',
 					totalAmount:'',
 					payAmount:'',
-					payType:''
+					payType:'',
+					memberId:'',
+					memberUsername:'',
 				}
 			};
 		},
@@ -84,11 +87,14 @@
 			},
 			//确认支付
 			confirm: async function() {
+				this.userInfo=this.$getStorage("userInfo");
 				this.orderParams.goodsId=this.goodsList.id;
 				this.orderParams.goodsName=this.goodsList.name;
 				this.orderParams.totalAmount=this.goodsList.promotionPrice;
 				this.orderParams.payAmount=this.goodsList.promotionPrice;
 				this.orderParams.payType=this.payType;
+				this.orderParams.memberId=this.userInfo.id;
+				this.orderParams.memberUsername=this.userInfo.username;
 				uni.request({
 				    url: "http://localhost:8083/api/order/createOrder",
 					data:this.orderParams,
