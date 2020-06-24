@@ -83,9 +83,11 @@
 				    dataType: "JSON",
 				    success: function(res) {
 						if(res.data.code==200){
-							uni.navigateBack();		
+							uni.setStorageSync('userInfo',res.data.data.userInfo); 
+							uni.switchTab({
+								url: `/pages/user/user`
+							})
 						}
-						console.log(res)
  				    }
 				});
 				

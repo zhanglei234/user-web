@@ -2,110 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc20c924-f516-41cd-b4bd-98434663582f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uni4mall.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/empty.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mix-list-cell.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/mix-loading/mix-loading.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/share.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/uni-load-more/uni-load-more.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/uni-number-box.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/upload-images.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/address/address.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/address/addressManage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cart/cart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/category/category.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/detail/detail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/index/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/money/money.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/money/pay.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/money/paySuccess.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/notice/notice.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/order/createOrder.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/order/order.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/product/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/product/product.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/public/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/set/set.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/user/user.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/userinfo/userinfo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/arc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/emptyCart.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/errorImage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/missing-face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-cart-current.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-cate-current.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-cate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-home-current.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-my-current.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tab-my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/ad-splash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/ad1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/ad2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/ad3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/c8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/cate9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/h1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/secskill-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/share_moment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/share_qq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/share_qqzone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/share_wechat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/user-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/vip-card-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/yticon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uni.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/public/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/public/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,8 +120,16 @@
       <updated>1592385066214</updated>
       <workItem from="1592385077480" duration="1223000" />
       <workItem from="1592975459241" duration="1722000" />
-      <workItem from="1592980334324" duration="601000" />
+      <workItem from="1592980334324" duration="1561000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1592982373911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592982373911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,12 +137,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="338" y="22" key="CommitChangelistDialog2" timestamp="1592982371823">
+      <screen x="0" y="0" width="1680" height="1002" />
+    </state>
+    <state x="338" y="22" key="CommitChangelistDialog2/0.0.1680.1002@0.0.1680.1002" timestamp="1592982371823" />
     <state x="566" y="194" key="FileChooserDialogImpl" timestamp="1592975957020">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state x="566" y="194" key="FileChooserDialogImpl/0.0.1680.1002@0.0.1680.1002" timestamp="1592975957020" />
+    <state x="331" y="166" key="Vcs.Push.Dialog.v2" timestamp="1592982375842">
+      <screen x="0" y="0" width="1680" height="1002" />
+    </state>
+    <state x="331" y="166" key="Vcs.Push.Dialog.v2/0.0.1680.1002@0.0.1680.1002" timestamp="1592982375842" />
     <state x="439" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1592980337573">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>

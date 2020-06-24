@@ -45,8 +45,15 @@ Vue.config.productionTip = false
 Vue.prototype.$fire = new Vue();
 Vue.prototype.$store = store;
 Vue.prototype.$api = {msg, json, prePage};
-
-App.mpType = 'app'
+Vue.prototype.$getStorage = function(key){
+	var userParam = uni.getStorageSync(key);
+	if (userParam != null && userParam != "" && userParam!= undefined) {
+		return userParam;
+	}else{
+		return null;
+	}
+	};
+	App.mpType = 'app'
 
 const app = new Vue({
     ...App

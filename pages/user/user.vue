@@ -4,11 +4,11 @@
 			<image class="bg" src="/static/user-bg.jpg"></image>
 			<view class="user-info-box">
 				<view class="portrait-box">
-					<image class="portrait" :src="userInfo.userInfo.icon || '/static/missing-face.png'" v-if="userInfo"></image>
+					<image class="portrait" :src="userInfo.icon || '/static/missing-face.png'" v-if="userInfo"></image>
 					<image class="portrait" src="/static/missing-face.png" v-else></image>
 				</view>
 				<view class="info-box">
-					<text class="username" v-if="userInfo">{{userInfo.userInfo.username}}</text>
+					<text class="username" v-if="userInfo">{{userInfo.username}}</text>
 					<view class="username" v-else >Hi，您未登录</view>
 				</view>
 			</view>
@@ -40,7 +40,7 @@
 			
 			<view class="tj-sction">
 				<view class="tj-item">
-					<text class="num">128.8</text>
+					<text class="num" v-if="userInfo">{{userInfo.blance}}</text>
 					<text>余额</text>
 				</view>
 				<view class="tj-item">
@@ -48,7 +48,7 @@
 					<text>优惠券</text>
 				</view>
 				<view class="tj-item">
-					<text class="num">20</text>
+					<text class="num" v-if="userInfo" >{{userInfo.integration}}</text>
 					<text>积分</text>
 				</view>
 			</view>
@@ -110,9 +110,11 @@
 				coverTransform: 'translateY(0px)',
 				coverTransition: '0s',
 				moving: false,
+				userInfo:[]
 			}
 		},
-		onLoad(){
+		onLoad(options){
+			this.userInfo=this.$getStorage("userInfo");
 		},
 		 
 		onNavigationBarButtonTap(e) {
@@ -138,7 +140,7 @@
 			...mapState(['hasLogin','userInfo'])
 		},
         methods: {
-			
+			 
 			navTo(url){
 				if(!this.hasLogin){
 					url = '/pages/public/login';
